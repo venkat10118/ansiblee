@@ -1,8 +1,8 @@
-- name: install and run
+- name: Install and run
   hosts: mongodb
   become: yes
   tasks:
-  - name: install nginx
+  - name: Install nginx
      ansible.builtin.yum:
      name: nginx
      state: installed
