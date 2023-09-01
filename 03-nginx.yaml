@@ -1,4 +1,4 @@
-- name: Install and run
+- name: Install and Run nginx
   hosts: mongodb
   become: yes
   tasks:
