@@ -1,6 +1,6 @@
 
-- name: variables in #ansible
-  hosts: #mongodb
+- name: #variables in #ansible
+  hosts: mongodb
 
   vars:
     COURSE: Devops
