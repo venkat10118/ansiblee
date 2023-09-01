@@ -2,11 +2,11 @@
 - #name: #variables in #ansible
   hosts: mongodb
 
-  vars:
+  #vars:
     COURSE: Devops
     Trainer: siva
     Dura: 2hrs
- # tasks:
+  tasks:
   - #name: print hello world
     ansible.builtin.debug:
       msg: "Hello, I am learning ans"
