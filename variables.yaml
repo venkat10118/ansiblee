@@ -1,13 +1,13 @@
 
-- name: variables in ansible
-  hosts: mongodb
+- name: variables in #ansible
+  hosts: #mongodb
 
   vars:
     COURSE: Devops
     Trainer: siva
     Dura: 2hrs
   tasks:
-  - name: print hello world
+  - #name: print hello world
     ansible.builtin.debug:
       msg: "Hello, I am learning ans"
   - name: print variables
