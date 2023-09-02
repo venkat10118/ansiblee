@@ -1,0 +1,23 @@
+- name: create user
+  hosts: localhost
+  tasks:
+  - name: check roboshop user exist or not
+    # when we wAT tod run directly  in case ansible mods not available
+    # when the user does not exist,ansible treating this failure and comeout by default
+    #ignore errors:true
+    ansible.builtin.command: id roboshop
+    register: output #o/p is variable name
+    ignore_errors: true
+
+  - name: print the command output
+    ansible.builtin.debug:
+      msg: "output is: {{output}}"
+  - name: print exit status
+    ansible.builtin.debug:
+      msg: "{{output.rc}}"
+  - name: create user roboshop
+    become: yes
+    ansible.builtin.user:
+      name: roboshop
+    when: output.rc != 0
+    
